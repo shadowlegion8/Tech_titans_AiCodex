@@ -1,0 +1,294 @@
+{
+  "links": [
+    {
+      "from": 0,
+      "paramMapping": [
+        {
+          "from": "input",
+          "to": "image"
+        }
+      ],
+      "to": 1,
+      "data": {
+        "io": [
+          {
+            "input": "image",
+            "output": "input"
+          }
+        ],
+        "isNew": false,
+        "isFocused": false
+      }
+    },
+    {
+      "from": 1,
+      "paramMapping": [
+        {
+          "from": "data",
+          "to": "output"
+        }
+      ],
+      "to": 2,
+      "data": {
+        "io": [
+          {
+            "input": "output",
+            "output": "data"
+          }
+        ],
+        "isNew": false,
+        "isFocused": false
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "dataType": [
+        "image"
+      ],
+      "label": "Input 1",
+      "number": 0,
+      "position": {
+        "x": 160,
+        "y": 108
+      },
+      "type": "INPUT"
+    },
+    {
+      "assetId": "646f5ce8cfb5f83af659e392",
+      "assetType": "MODEL",
+      "autoSelectOptions": [],
+      "fileMetadata": "{}",
+      "function": "ocr",
+      "functionType": "AI",
+      "inputValues": [],
+      "label": "AI 1",
+      "number": 1,
+      "position": {
+        "x": 352,
+        "y": 88
+      },
+      "status": "Exists",
+      "type": "ASSET",
+      "model": {
+        "__typename": "Model",
+        "assetType": "model",
+        "benchmarkable": false,
+        "connectionType": [
+          "SYNCHRONOUS"
+        ],
+        "createdAt": "2023-05-30T12:35:02.089Z",
+        "description": null,
+        "executionEndpoint": "https://models.aixplain.com/api/v1/execute",
+        "function": "ocr",
+        "functionData": {
+          "__typename": "Function",
+          "benchmarkable": false,
+          "code": "ocr",
+          "input": [
+            {
+              "__typename": "FunctionInput",
+              "allowedRange": {
+                "__typename": "AllowedRange",
+                "from": null,
+                "to": null
+              },
+              "allowMulti": false,
+              "allowMultipleConnections": false,
+              "availableOptions": [],
+              "code": "image",
+              "dataSubType": null,
+              "dataType": "image",
+              "defaultValue": [],
+              "fixed": false,
+              "name": "Image",
+              "relatedFunction": null,
+              "required": true
+            },
+            {
+              "__typename": "FunctionInput",
+              "allowedRange": {
+                "__typename": "AllowedRange",
+                "from": null,
+                "to": null
+              },
+              "allowMulti": false,
+              "allowMultipleConnections": false,
+              "availableOptions": [],
+              "code": "featuretypes",
+              "dataSubType": null,
+              "dataType": "text",
+              "defaultValue": [],
+              "fixed": false,
+              "name": "Feature Types",
+              "relatedFunction": null,
+              "required": true
+            }
+          ],
+          "isDummy": null,
+          "name": "OCR",
+          "output": [
+            {
+              "__typename": "FunctionOutput",
+              "code": "data",
+              "dataType": "text"
+            }
+          ],
+          "rules": [],
+          "status": "onboarded",
+          "type": "AI"
+        },
+        "hostedBy": "AWS",
+        "id": "646f5ce8cfb5f83af659e392",
+        "in": "",
+        "inDataTypes": [
+          "image"
+        ],
+        "input": [
+          {
+            "__typename": "ModelInput",
+            "allowedRange": {
+              "__typename": "AllowedRange",
+              "from": null,
+              "to": null
+            },
+            "allowMulti": false,
+            "allowMultipleConnections": false,
+            "availableOptions": [],
+            "code": "image",
+            "name": "Image",
+            "dataSubType": null,
+            "dataType": "image",
+            "defaultValue": null,
+            "example": null,
+            "fixed": false,
+            "relatedFunction": null,
+            "required": true,
+            "supportedFileTypes": [
+              "pdf",
+              "jpg"
+            ],
+            "supportsVariables": false,
+            "value": []
+          },
+          {
+            "__typename": "ModelInput",
+            "allowedRange": {
+              "__typename": "AllowedRange",
+              "from": null,
+              "to": null
+            },
+            "allowMulti": false,
+            "allowMultipleConnections": false,
+            "availableOptions": [
+              {
+                "__typename": "DataValue",
+                "label": "Tables",
+                "value": "TABLES"
+              },
+              {
+                "__typename": "DataValue",
+                "label": "Forms",
+                "value": "FORMS"
+              },
+              {
+                "__typename": "DataValue",
+                "label": "Signatures",
+                "value": "SIGNATURES"
+              },
+              {
+                "__typename": "DataValue",
+                "label": "Default",
+                "value": "default"
+              }
+            ],
+            "code": "featuretypes",
+            "name": "Feature Types",
+            "dataSubType": null,
+            "dataType": "text",
+            "defaultValue": [
+              {
+                "__typename": "DataValue",
+                "label": "Default",
+                "value": "default"
+              }
+            ],
+            "example": null,
+            "fixed": false,
+            "relatedFunction": null,
+            "required": false,
+            "supportedFileTypes": [],
+            "supportsVariables": false,
+            "value": [
+              {
+                "__typename": "DataValue",
+                "label": "Default",
+                "value": "default"
+              }
+            ]
+          }
+        ],
+        "isExecutable": true,
+        "isFineTunable": false,
+        "isTransferable": false,
+        "latestPrice": {
+          "__typename": "ModelPrice",
+          "unitPrice": 0.001,
+          "unitPriceRangeFrom": 0,
+          "unitPriceRangeTo": 0,
+          "unitType": "REQUEST",
+          "unitTypeScale": null
+        },
+        "name": "Optical Character Recognition",
+        "out": "",
+        "outDataTypes": [
+          "text"
+        ],
+        "output": [
+          {
+            "__typename": "ModelOutput",
+            "code": "data",
+            "dataSubType": "labeledImage",
+            "dataType": "text",
+            "example": null,
+            "pipelineConfig": {
+              "__typename": "ModelOutputPipelineConfig",
+              "allowedNodeTypes": []
+            }
+          }
+        ],
+        "privacy": "Public",
+        "status": "onboarded",
+        "subscribed": false,
+        "subscription": null,
+        "teamData": {
+          "__typename": "ShortTeam",
+          "id": 1763,
+          "name": "AWS"
+        },
+        "totalSubscribed": 14,
+        "type": "REGULAR",
+        "versioning": {
+          "__typename": "ResourceInfo",
+          "key": "8d882dc1-e2b1-4577-8784-c4b7b25fdf82",
+          "tag": "initial",
+          "tags": [
+            "initial"
+          ]
+        }
+      }
+    },
+    {
+      "dataType": [
+        "text"
+      ],
+      "label": "Output 1",
+      "number": 2,
+      "position": {
+        "x": 672,
+        "y": 108
+      },
+      "type": "OUTPUT"
+    }
+  ]
+}
